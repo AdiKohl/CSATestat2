@@ -45,6 +45,24 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FahrbefehlServer\FahrbefehlServer.csproj">
+      <Project>{AF793EAC-5D11-4064-923C-689AECCA98DD}</Project>
+      <Name>FahrbefehlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTTPServer\HTTPServer.csproj">
+      <Project>{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}</Project>
+      <Name>HTTPServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
+      <Project>{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}</Project>
+      <Name>RobotCtrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RobotIO\RobotIO.csproj">
+      <Project>{2C2393F2-2E83-441F-8552-3413CD6FA4C5}</Project>
+      <Name>RobotIO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\v8.0\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

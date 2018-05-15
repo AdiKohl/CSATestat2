@@ -5,20 +5,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using RobotCtrl;
-using RobotIO;
+using System.Threading;
 
-
-namespace RobotComonicationTest
+namespace HTTPServer
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Willkommen zum CSA Testat2 Projekt der Hochschule Luzern");
-            Robot robot = new Robot();
-
-
+            HTTPServer hs = new HTTPServer(8080);
+            new Thread(hs.Start).Start();
             
         }
     }
