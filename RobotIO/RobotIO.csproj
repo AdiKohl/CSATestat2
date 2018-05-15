@@ -52,10 +52,6 @@
       <Project>{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}</Project>
       <Name>RobotCtrl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RobotView\RobotView1.csproj">
-      <Project>{71A78AAC-DA46-40E3-8AD5-0FE7195BC244}</Project>
-      <Name>RobotView1</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\GpioLib_Dll.exp" />
