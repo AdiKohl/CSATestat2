@@ -3,71 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotTestat2", "RobotComonicationTest\RobotTestat2.csproj", "{08813890-9CDD-4C57-9677-3213D1105298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCtrl", "RobotCtrl\RobotCtrl.csproj", "{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RobotCtrl", "RobotCtrl", "{D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Constants.cs = ..\Robot\RobotCtrl\Constants.cs
-		..\Robot\RobotCtrl\IOPort.cs = ..\Robot\RobotCtrl\IOPort.cs
-		..\Robot\RobotCtrl\PositionInfo.cs = ..\Robot\RobotCtrl\PositionInfo.cs
-		..\Robot\RobotCtrl\Radar.cs = ..\Robot\RobotCtrl\Radar.cs
-		..\Robot\RobotCtrl\Robot.cs = ..\Robot\RobotCtrl\Robot.cs
-		..\Robot\RobotCtrl\RobotConsole.cs = ..\Robot\RobotCtrl\RobotConsole.cs
-		..\Robot\RobotCtrl\RobotCtrl.csproj = ..\Robot\RobotCtrl\RobotCtrl.csproj
-		..\Robot\RobotCtrl\RobotCtrl.csproj.user = ..\Robot\RobotCtrl\RobotCtrl.csproj.user
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotIO", "RobotIO\RobotIO.csproj", "{2C2393F2-2E83-441F-8552-3413CD6FA4C5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Drive", "Drive", "{2B718C5D-BC10-4F69-9D1C-B250C678879D}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Drive\Drive.cs = ..\Robot\RobotCtrl\Drive\Drive.cs
-		..\Robot\RobotCtrl\Drive\DriveInfo.cs = ..\Robot\RobotCtrl\Drive\DriveInfo.cs
-		..\Robot\RobotCtrl\Drive\Track.cs = ..\Robot\RobotCtrl\Drive\Track.cs
-		..\Robot\RobotCtrl\Drive\TrackArcLeft.cs = ..\Robot\RobotCtrl\Drive\TrackArcLeft.cs
-		..\Robot\RobotCtrl\Drive\TrackArcRight.cs = ..\Robot\RobotCtrl\Drive\TrackArcRight.cs
-		..\Robot\RobotCtrl\Drive\TrackLine.cs = ..\Robot\RobotCtrl\Drive\TrackLine.cs
-		..\Robot\RobotCtrl\Drive\TrackTurn.cs = ..\Robot\RobotCtrl\Drive\TrackTurn.cs
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotTestat2", "RobotTestat2\RobotTestat2.csproj", "{08813890-9CDD-4C57-9677-3213D1105298}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{8D3956B2-57CF-4E7D-88FB-4107602738A8}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Engine\DriveCtrl.cs = ..\Robot\RobotCtrl\Engine\DriveCtrl.cs
-		..\Robot\RobotCtrl\Engine\MotorCtrl.cs = ..\Robot\RobotCtrl\Engine\MotorCtrl.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input", "Input", "{C74ABCA5-1ACE-4D35-BA53-A4D0C9450608}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Input\DigitalIn.cs = ..\Robot\RobotCtrl\Input\DigitalIn.cs
-		..\Robot\RobotCtrl\Input\DigitalInChangedArgs.cs = ..\Robot\RobotCtrl\Input\DigitalInChangedArgs.cs
-		..\Robot\RobotCtrl\Input\Switch.cs = ..\Robot\RobotCtrl\Input\Switch.cs
-		..\Robot\RobotCtrl\Input\SwitchEventArgs.cs = ..\Robot\RobotCtrl\Input\SwitchEventArgs.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{0547A4BC-03EC-472D-B658-B59BACA593A0}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Output\DigitalOut.cs = ..\Robot\RobotCtrl\Output\DigitalOut.cs
-		..\Robot\RobotCtrl\Output\Led.cs = ..\Robot\RobotCtrl\Output\Led.cs
-		..\Robot\RobotCtrl\Output\LedEventArgs.cs = ..\Robot\RobotCtrl\Output\LedEventArgs.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{42F439BA-5231-4558-ACFA-E317C50E2B40}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotCtrl\Properties\AssemblyInfo.cs = ..\Robot\RobotCtrl\Properties\AssemblyInfo.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RobotIO", "RobotIO", "{88762D3C-5FAF-45A1-801B-FC02C6DC23CA}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotIO\GPIO.cs = ..\Robot\RobotIO\GPIO.cs
-		..\Robot\RobotIO\GPIOPort.cs = ..\Robot\RobotIO\GPIOPort.cs
-		..\Robot\RobotIO\IIOPortEx.cs = ..\Robot\RobotIO\IIOPortEx.cs
-		..\Robot\RobotIO\IOPortEx.cs = ..\Robot\RobotIO\IOPortEx.cs
-		..\Robot\RobotIO\RobotIO.csproj = ..\Robot\RobotIO\RobotIO.csproj
-		..\Robot\RobotIO\RobotIO.csproj.user = ..\Robot\RobotIO\RobotIO.csproj.user
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{32F3985B-1332-4777-ABA0-7D177E708B6D}"
-	ProjectSection(SolutionItems) = preProject
-		..\Robot\RobotIO\Properties\AssemblyInfo.cs = ..\Robot\RobotIO\Properties\AssemblyInfo.cs
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FahrbefehlServer", "FahrbefehlServer\FahrbefehlServer.csproj", "{AF793EAC-5D11-4064-923C-689AECCA98DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,22 +17,32 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2393F2-2E83-441F-8552-3413CD6FA4C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Release|Any CPU.Build.0 = Release|Any CPU
 		{08813890-9CDD-4C57-9677-3213D1105298}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF793EAC-5D11-4064-923C-689AECCA98DD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{2B718C5D-BC10-4F69-9D1C-B250C678879D} = {D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}
-		{8D3956B2-57CF-4E7D-88FB-4107602738A8} = {D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}
-		{C74ABCA5-1ACE-4D35-BA53-A4D0C9450608} = {D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}
-		{0547A4BC-03EC-472D-B658-B59BACA593A0} = {D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}
-		{42F439BA-5231-4558-ACFA-E317C50E2B40} = {D2A3F9DB-14E9-4C33-BE13-30712F2EEB52}
-		{32F3985B-1332-4777-ABA0-7D177E708B6D} = {88762D3C-5FAF-45A1-801B-FC02C6DC23CA}
 	EndGlobalSection
 EndGlobal
