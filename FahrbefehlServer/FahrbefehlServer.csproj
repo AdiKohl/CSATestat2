@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLogger.cs" />
     <Compile Include="FahrbefehlExe.cs" />
     <Compile Include="FahrbefehlServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

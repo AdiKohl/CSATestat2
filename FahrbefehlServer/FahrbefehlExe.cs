@@ -5,6 +5,7 @@ using System.Text;
 using System.Collections;
 using RobotCtrl;
 using RobotIO;
+using System.Threading;
 
 namespace FileServer
 {
@@ -14,6 +15,7 @@ namespace FileServer
         private ArrayList befehlArray;
         private String[] Splitted;
         private Robot robot;
+        private DataLogger dl;
 
         public FahrbefehlExe(ArrayList befehlArray)
         {
@@ -33,6 +35,11 @@ namespace FileServer
                 Splitted = ((String)befehlArray[i]).Split(' ');
                 switch (Splitted[0])
                 {
+                    case "Start":
+                        dl = new DataLogger();
+                        new Thread(dl.Log).Start();
+                        break;
+
                     case "TrackLine":
                         valueL = Convert.ToDouble(Splitted[1]);
                         // Ausführen fahrt
