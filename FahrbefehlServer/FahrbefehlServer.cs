@@ -43,6 +43,7 @@ namespace FileServer
                 client.Close();
 
 
+
                 // WENN FERTIG, DANN FAHRBEFEHLEXE MIT ARRAY AUFRUFEN
                 FahrbefehlExe exe = new FahrbefehlExe(befehlArray);
                 exe.DoExe();
