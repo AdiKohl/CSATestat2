@@ -52,8 +52,11 @@ namespace FahrbefehlSender
                 while((fahrbefehl = sr.ReadLine()) != null)
                 {
                     sender.WriteLine(fahrbefehl);
+                    sender.Flush();
 
                 }
+
+                client.Close();
 
             }
         }
