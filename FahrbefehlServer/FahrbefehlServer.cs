@@ -9,7 +9,7 @@ using System.Collections;
 namespace FileServer
 
 {
-    class FahrbefehlServer
+    public class FahrbefehlServer
     {
         private ArrayList befehlArray;
 
@@ -31,15 +31,18 @@ namespace FileServer
             {
                 TcpClient client = listen.AcceptTcpClient();
                 StreamReader sr = new StreamReader(client.GetStream());
+                Console.WriteLine("empfange Fahrbefehle...");
 
                 // ABFÜLLEN ARRAY
                 string line;
                 int i=0;
                 while((line = sr.ReadLine()) != null)
                 {
-                    befehlArray[i] = line;
+                    befehlArray.Add(line);
                     i++;
+                    Console.WriteLine(line);
                 }
+                Console.WriteLine("Fahrbefehle erhalten");
                 client.Close();
 
 

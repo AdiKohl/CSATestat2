@@ -5,11 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using RobotCtrl;
-using RobotIO;
+using System.Threading;
 
+using HTTPServer;
+using FileServer; 
 
-namespace RobotComonicationTest
+namespace RobotTestat2
 {
     class Program
     {
@@ -17,12 +18,16 @@ namespace RobotComonicationTest
         {
             Console.WriteLine("Willkommen zum CSA Testat2 Projekt der Hochschule Luzern");
             //Robot robot = new Robot()
-            
+
+            //Fahrbefehlserver starten
+            FahrbefehlServer fbs = new FahrbefehlServer();
+            fbs.DoListen();
 
 
 
+            Console.WriteLine("Programm beendet... ");
 
-            
         }
     }
 }
+

@@ -26,6 +26,7 @@ namespace HTTPServer
             //    file.WriteLine("Test File ");
             //    file.WriteLine(" ");
             //    file.WriteLine("hier wuerde sinnvolles stehen ");
+            //    file.Close();
             //}
 
         }

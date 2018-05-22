@@ -29,7 +29,7 @@ namespace FileServer
             //Abarbeiten der Fahrbefehle im befehlArray
             int i = 0;
             double valueL;
-            double valueA;
+            int valueA;
             try
             {
                 while (befehlArray[i] != null)
@@ -49,24 +49,24 @@ namespace FileServer
                         case "TrackLine":
                             valueL = Convert.ToDouble(Splitted[1]);
                             // Ausführen fahrt
-                            robot.Drive.RunLine((float)valueL, 0.4f, 0.4f);
+                            robot.Drive.RunLine((float)valueL, 0.2f, 0.2f);
                             break;
                         case "TrackTurnLeft":
-                            valueA = Convert.ToDouble(Splitted[1]);
-                            robot.Drive.RunTurn((float)valueA, 0.4f, 0.2f);
+                            valueA = Convert.ToInt32(Splitted[1]);
+                            robot.Drive.RunTurn(valueA, 0.2f, 0.2f);
                             break;
                         case "TrackTurnRight":
-                            valueA = Convert.ToDouble(Splitted[1]);
-                            robot.Drive.RunTurn((float)-valueA, 0.4f, 0.2f);
+                            valueA = Convert.ToInt32(Splitted[1]);
+                            robot.Drive.RunTurn(-valueA, 0.2f, 0.2f);
                             break;
                         case "TurnArcLeft":
-                            valueA = Convert.ToDouble(Splitted[1]);
+                            valueA = Convert.ToInt32(Splitted[1]);
                             valueL = Convert.ToDouble(Splitted[2]);
-                            robot.Drive.RunArcLeft((float)valueL,(float) valueA, 0.2f, 0.2f);
+                            robot.Drive.RunArcLeft((float)valueL, valueA, 0.2f, 0.2f);
 
                             break;
                         case "TurnArcRight":
-                            valueA = Convert.ToDouble(Splitted[1]);
+                            valueA = Convert.ToInt16(Splitted[1]);
                             valueL = Convert.ToDouble(Splitted[2]);
                             robot.Drive.RunArcRight((float)valueL, (float)valueA, 0.2f, 0.2f);
 
@@ -80,7 +80,6 @@ namespace FileServer
             finally
             {
                 robot.Drive.Power = false;
-                robot.Drive.Halt();
                 dl.Stop();
             }
 

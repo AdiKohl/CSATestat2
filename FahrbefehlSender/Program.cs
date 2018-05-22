@@ -46,18 +46,18 @@ namespace FahrbefehlSender
             Console.WriteLine("Verbindung mit Roboter erfolgreich!");
 
             string fahrbefehl;
-            Console.Write("Zum senden der Fahrbfehle ENTER drücken...");
-            while ((lineTwo = Console.ReadLine()) != null)
+            Console.Write("Zum senden der Fahrbefehle ENTER drücken...");
+            while ((lineTwo = Console.ReadLine()) != "close")
             {
                 while((fahrbefehl = sr.ReadLine()) != null)
                 {
                     sender.WriteLine(fahrbefehl);
                     sender.Flush();
-
+                    Console.WriteLine(fahrbefehl);
                 }
-
+                Console.WriteLine("alle Fahrbefehle gesendet");
                 client.Close();
-
+                Console.WriteLine("Roboter startet jetzt...");
             }
         }
     }
