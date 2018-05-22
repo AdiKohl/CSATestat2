@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FahrbefehlServer", "Fahrbef
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPServer", "HTTPServer\HTTPServer.csproj", "{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FahrbefehlSender", "FahrbefehlSender\FahrbefehlSender.csproj", "{2777AD35-19C4-46DC-8916-A6F7759988AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2777AD35-19C4-46DC-8916-A6F7759988AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2777AD35-19C4-46DC-8916-A6F7759988AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2777AD35-19C4-46DC-8916-A6F7759988AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2777AD35-19C4-46DC-8916-A6F7759988AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
