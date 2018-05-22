@@ -70,6 +70,7 @@ namespace FileServer
                         break;
                 }
             }
+            dl.Stop();
 
 
 

@@ -14,5 +14,10 @@ namespace FileServer
 
         }
 
+        public void Stop()
+        {
+
+        }
+
     }
 }
