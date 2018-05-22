@@ -16,7 +16,10 @@ namespace RobotComonicationTest
         static void Main(string[] args)
         {
             Console.WriteLine("Willkommen zum CSA Testat2 Projekt der Hochschule Luzern");
-            Robot robot = new Robot();
+            //Robot robot = new Robot()
+            
+
+
 
 
             
