@@ -68,7 +68,12 @@ namespace HTTPServer
             }
             catch (Exception e)
             {
-                Console.WriteLine("Es ist ein Fehler aufgetreten" + e.Message);
+                Console.WriteLine("Es ist ein Fehler aufgetreten");
+                Console.WriteLine(" ");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(" ");
+                Console.WriteLine("zum beenden Enter drücken... ");
+                Console.ReadLine();
                 myClient.Close();
             }
         }

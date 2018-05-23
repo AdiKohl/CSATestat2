@@ -33,32 +33,45 @@ namespace FahrbefehlSender
             }
             */
 
-            
+
             FileStream fs = new FileStream("C:/temp/fahrbefehle.txt", FileMode.Open);
             StreamReader sr = new StreamReader(fs);
 
             string lineTwo;
             Console.Write("Bitte IP des Roboters eingeben: ");
             string ipAddress = Console.ReadLine();
-
-            TcpClient client = new TcpClient(ipAddress, 8888);
-            StreamWriter sender = new StreamWriter(client.GetStream());
-            Console.WriteLine("Verbindung mit Roboter erfolgreich!");
-
-            string fahrbefehl;
-            Console.Write("Zum senden der Fahrbefehle ENTER drücken...");
-            while ((lineTwo = Console.ReadLine()) != "close")
+            TcpClient client = null;
+            try
             {
-                while((fahrbefehl = sr.ReadLine()) != null)
+                client = new TcpClient(ipAddress, 8888);
+                StreamWriter sender = new StreamWriter(client.GetStream());
+                Console.WriteLine("Verbindung mit Roboter erfolgreich!");
+
+                string fahrbefehl;
+                Console.Write("Zum senden der Fahrbefehle ENTER drücken...");
+                while ((lineTwo = Console.ReadLine()) != "close")
                 {
-                    sender.WriteLine(fahrbefehl);
-                    sender.Flush();
-                    Console.WriteLine(fahrbefehl);
+                    while ((fahrbefehl = sr.ReadLine()) != null)
+                    {
+                        sender.WriteLine(fahrbefehl);
+                        sender.Flush();
+                        Console.WriteLine(fahrbefehl);
+                    }
+                    Console.WriteLine("alle Fahrbefehle gesendet");
+                    client.Close();
+                    Console.WriteLine("Roboter startet jetzt...");
                 }
-                Console.WriteLine("alle Fahrbefehle gesendet");
-                client.Close();
-                Console.WriteLine("Roboter startet jetzt...");
             }
+            catch(Exception e)
+            {
+                Console.WriteLine("Verbindung mit TCPCliet nicht möglich: ");
+                Console.WriteLine(" ");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(" ");
+                Console.WriteLine("zum beenden Enter drücken... ");
+                Console.ReadLine();
+            }
+
         }
     }
 }

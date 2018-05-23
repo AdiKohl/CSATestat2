@@ -26,16 +26,16 @@ namespace FileServer
         public void DoExe()
         {
 
-            //Abarbeiten der Fahrbefehle im befehlArray
-            int i = 0;
+            //Abarbeiten der Fahrbefehle im befehlArray           
             double valueL;
             double valueA;
+            int count = this.befehlArray.Count; 
             try
             {
-                while (befehlArray[i] != null)
+                for(int i = 0; i< count; i++)
                 {
                     Splitted = ((String)befehlArray[i]).Split(' ');
-                    i++;
+                    //i++;
                     switch (Splitted[0])
                     {
                         case "Start":
@@ -49,31 +49,35 @@ namespace FileServer
                         case "TrackLine":
                             valueL = Convert.ToDouble(Splitted[1]);
                             // Ausführen fahrt
-                            robot.Drive.RunLine((float)valueL, 0.4f, 0.4f);
+                            robot.Drive.RunLine((float)valueL, 0.5f, 0.5f);
                             break;
                         case "TrackTurnLeft":
                             valueA = Convert.ToDouble(Splitted[1]);
-                            robot.Drive.RunTurn((float)valueA, 0.4f, 0.2f);
+                            robot.Drive.RunTurn((float)valueA, 0.5f, 0.3f);
                             break;
                         case "TrackTurnRight":
                             valueA = Convert.ToDouble(Splitted[1]);
-                            robot.Drive.RunTurn((float)-valueA, 0.4f, 0.2f);
+                            robot.Drive.RunTurn((float)valueA * -1, 0.5f, 0.3f);
                             break;
-                        case "TurnArcLeft":
+                        case "TrackArcLeft":
                             valueA = Convert.ToDouble(Splitted[1]);
                             valueL = Convert.ToDouble(Splitted[2]);
-                            robot.Drive.RunArcLeft((float)valueL,(float) valueA, 0.2f, 0.2f);
+                            robot.Drive.RunArcLeft((float)valueL,(float) valueA, 0.5f, 0.3f);
 
                             break;
-                        case "TurnArcRight":
+                        case "TrackArcRight":
                             valueA = Convert.ToDouble(Splitted[1]);
                             valueL = Convert.ToDouble(Splitted[2]);
-                            robot.Drive.RunArcRight((float)valueL, (float)valueA, 0.2f, 0.2f);
+                            robot.Drive.RunArcRight((float)valueL, (float)valueA, 0.5f, 0.3f);
 
                             break;
 
                         default:
                             break;
+                    }
+                    while (!robot.Drive.Done)
+                    {
+                        //warten bis done
                     }
                 }
             }
@@ -82,9 +86,8 @@ namespace FileServer
                 robot.Drive.Power = false;
                 robot.Drive.Halt();
                 dl.Stop();
+                
             }
-
-
 
         }
     }

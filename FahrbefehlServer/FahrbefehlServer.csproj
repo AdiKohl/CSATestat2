@@ -48,6 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTTPServer\HTTPServer.csproj">
+      <Project>{A7B0E358-9AC4-40AB-9C33-DCE0F19AC4D1}</Project>
+      <Name>HTTPServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
       <Project>{B95E0F05-B89C-4481-99A7-09CA86E4C1B6}</Project>
       <Name>RobotCtrl</Name>

@@ -17,11 +17,11 @@ namespace FileServer
         public void Log()
         {
             Status = true;//run Baby run!!
-            //if (File.Exists(@"Temp\DataFile.txt"))
-            //    {
-            //        File.Delete(@"Temp\DataFile.txt"); //wegg mit dem alten
-            //    }
-            
+            if (File.Exists(@"Temp\DataFile.txt"))
+            {
+                File.Delete(@"Temp\DataFile.txt"); //wegg mit dem alten
+            }
+
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"Temp\DataFile.txt", true))
             {
                 file.WriteLine("Data of Testat2: ");
@@ -37,6 +37,7 @@ namespace FileServer
         public void Stop()
         {
             Status = false;
+            
         }
 
     }
